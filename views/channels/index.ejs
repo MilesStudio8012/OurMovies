@@ -1,0 +1,22 @@
+<h2>Search Channels </h2>
+<form action="/channels" method="GET">
+    <div>
+        <label>Name</label>
+        <input type="text" name="name" value="<% searchOptions.name %>">
+        <button type="submit">Search</button>
+    </div>
+    <div>
+        <label>Created After</label>
+        <input type="date" name="createdAfter" value="<% searchOptions.createdAfter %>">
+        <button type="submit">Search</button>
+    </div>
+    <div>
+        <label>Created Before</label>
+        <input type="date" name="createdBefore" value="<% searchOptions.createdBefore %>">
+        <button type="submit">Search</button>
+    </div>
+</form>
+<br>
+<% channels.forEach(channel => { %>
+    <div><%= channel.name %></div>
+<% }) %>

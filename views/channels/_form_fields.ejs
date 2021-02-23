@@ -1,0 +1,7 @@
+<label>Name</label>
+<input type="text" name="name" value="<%= channel.name %>"> 
+<label>Description</label>
+<input type="text" name="description" value="<%= channel.description %>">  
+<label>Creation Date</label>
+<input type="date" name="creationDate" 
+        value="<%= channel.creationDate == null ? '' : channel.creationDate.toISOString().split('T')[0] %>"> 

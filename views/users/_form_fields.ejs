@@ -1,0 +1,21 @@
+<label>Name</label>
+<input type="text" name="name" value="<%= user.name %>"> 
+<label>Lastname</label>
+<input type="text" name="lastName" value="<%= user.lastName %>"> 
+<label>Description</label>
+<input type="text" name="description" value="<%= user.description %>"> 
+<label>Pseudo</label>
+<input type="text" name="pseudo" value="<%= user.pseudo %>"> 
+<label>Email</label>
+<input type="text" name="email" value="<%= user.email %>"> 
+<label>Picture</label>
+<input type="text" name="picture" value="<%= user.picture %>"> 
+<label>Channel</label>
+<input name="channel">
+<% channels.forEach(channel => { %>
+    <% if (channel.id === user.channel) { %>
+        <option selected label="<%= channel.name %>" value="<%= channel.id %>">
+    <% } else { %>
+       <option label="<%= channel.name %>" value="<%= channel.id %>">
+    <% } %>  
+<% }); %>
